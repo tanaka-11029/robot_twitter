@@ -22,7 +22,7 @@ status_msg = ["ただいまスタートゾーンから出発しました。\n",
 "シーツを干しに行きます。\n",
 "バスタオル１枚目を干し終わりました。\n",
 "バスタオル２枚目を干し終わりました。\n",
-"シーツを干し中です\n",
+"シーツを干し中です。\n",
 "シーツを干し終わりました。\n",
 "スタートゾーンに戻ります。\n",
 "スタートゾーンに到着しました。\n"]
@@ -33,7 +33,7 @@ status_msg = ["ただいまスタートゾーンから出発しました。\n",
 
 def twitter_send(data):
     dt_now = datetime.datetime.now()
-    date = dt_now.strftime('%m月%d日 %H時%M分')
+    date = dt_now.strftime('%m月%d日 %H時%M分%S秒')
     send_status = status_msg[0]
     rospy.loginfo("status : %d",data.status)
     if data.status == 1:
